@@ -37,6 +37,9 @@ public class Student {
     @Column
     private LocalDateTime updateAt;
 
+    @Column
+    private String email;
+
     @OneToOne
     @JoinColumn(name = "address_id")
     private Address address;
@@ -95,6 +98,14 @@ public class Student {
 
     public void setUpdateAt(LocalDateTime updateAt) {
         this.updateAt = updateAt;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public Address getAddress() {
