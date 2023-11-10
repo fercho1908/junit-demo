@@ -1,5 +1,6 @@
 package com.jdt.itcg.demo.entities;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
@@ -24,6 +25,7 @@ public class Student {
     private String lastName;
 
     @Column
+    @JsonFormat(pattern="yyyy-MM-dd")
     private LocalDate birthDate;
 
     @Column(name = "isActive")
